@@ -1,4 +1,9 @@
 # ISCut
+
+#### WARNING
+This is an alpha version
+
+#### Briefly
 Detects genes interrupted by Insertion Sequences in bacterial genomes using short reads
 
 required inputs are:
