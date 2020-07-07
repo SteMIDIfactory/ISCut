@@ -103,20 +103,3 @@ for bit in bits_list:
 	df=df[order]
 	df.to_excel(writer,bit)
 writer.save()
-
-
-"""
-OTHER CHECKS:
-1) blastn vs nt
-2) blastx vs refseq/nr
-
-3) find a "similar" longer sequence and add it to the alignment
-
-4) where does the added sequence blasts on the initial gene and on other genes in the pangenome?
-blastn -query ISCut_140418_1507/IS_bits_alignments/5984__group4048__group4048__1.fasta  -db PANGENOME.ffn -outfmt '6 qseqid sseqid pident qlen slen length qstart qend sstart send'
-
-5) where was the IS on the initial gene?
-blastn -task blastn -query ISCut_140418_1507/IS_bits_alignments/5984__group4048__group4048__1.fasta -db ISAba.fasta -outfmt '6 qseqid sseqid pident length qlen slen qstart qend sstart send' | awk '$3>90' | awk '$4>=30'
-
-"""
-
